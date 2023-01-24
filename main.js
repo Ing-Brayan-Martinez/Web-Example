@@ -9,12 +9,16 @@ class Animal extends Entity {
     
     constructor(name, owner) {
         super();
-        this.name = name;
         this.#owner = owner;
+        this._name = name;
     }
     
     hasOwner() {
         return Boolean(this.#owner);
+    }
+
+    get name() {
+        return this._name;
     }
 
     static of(value) {
@@ -26,5 +30,7 @@ let dog = new Animal("blacky", "trincot");
 
 
 console.log(dog.hasOwner()); // true
-console.log(dog.name); 
-console.log(dog.adge); 
+console.log(dog.name);  // "blacky"
+console.log(dog.adge); // 10
+
+Animal.of('Dog'); //dog
