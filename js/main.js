@@ -1,7 +1,7 @@
 import { Base } from "./other.js";
 
 class Entity extends Base {
-    adge = 10;
+    age = 10;
 }
 
 class Animal extends Entity {
@@ -31,6 +31,6 @@ let dog = new Animal("blacky", "trincot");
 
 console.log(dog.hasOwner()); // true
 console.log(dog.name);  // "blacky"
-console.log(dog.adge); // 10
+console.log(dog.age); // 10
 
 Animal.of('Dog'); //dog
